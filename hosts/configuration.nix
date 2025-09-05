@@ -80,16 +80,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.minh = {
-    shell = pkgs.fish;
-    isNormalUser = true;
-    description = "minh";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
-  };
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -97,31 +87,11 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Install neovim
+  programs.fish.enable = true;
   
-  # Setup fish
-  programs.fish = {
-    enable = true;
-
-    shellAliases = {
-      c = "clear";
-    };
-
-    shellInit = "echo 'Hello world!'";
-  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    git
-    anki
-    ghostty
-    fastfetch
-    rofi
-    git
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -131,8 +101,6 @@
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
-
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
@@ -141,7 +109,30 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+ 
+  # Fonts
+  fonts = {
+    packages = with pkgs; [
+      twemoji-color-font
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
+      maple-mono.NF
+    ];
 
+    fontconfig = {
+      defaultFonts = {
+        monospace = [
+          "Maple Mono NF"
+          "Noto Color Emoji"
+        ];
+        sansSerif = ["Noto Sans" "Noto Color Emoji"];
+        serif = ["Noto Serif" "Noto Color Emoji"];
+        emoji = ["Noto Color Emoji"];
+      };
+    };
+  };
+  
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
