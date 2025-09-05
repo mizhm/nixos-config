@@ -1,7 +1,8 @@
-{ pkgs
-, config
-, ...
-}: {
+{
+  pkgs,
+  ...
+}:
+{
   xdg.configFile."nvim".source = ../confs/nvim;
 
   programs.neovim = {
@@ -14,6 +15,17 @@
 
     #lsp
     lua-language-server
+    typescript-language-server
+    tailwindcss-language-server
+    nil
+
+    #lininting
+    eslint
+
+    #formatter
+    alejandra
+    prettier
+    biome
 
     #util
     fd

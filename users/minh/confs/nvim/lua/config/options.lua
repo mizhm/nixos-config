@@ -10,7 +10,7 @@ o.linebreak = true
 o.breakindent = true
 o.textwidth = 120
 o.wrap = false
-o.shell = "/usr/bin/fish"
+o.shell = "/run/current-system/sw/bin/fish"
 o.spell = true
 
 vim.g.snacks_animate = false
