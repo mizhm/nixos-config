@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../users/minh
     ];
 
   # Bootloader.
@@ -97,13 +98,6 @@
   nixpkgs.config.allowUnfree = true;
 
   # Install neovim
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    vimAlias = true;
-    viAlias = true;
-  };
-  xdg.configFile."nvim".source = ../users/minh/conf/nvim;
   
   # Setup fish
   programs.fish = {
