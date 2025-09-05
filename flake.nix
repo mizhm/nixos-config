@@ -15,7 +15,11 @@
 	nixosConfigurations.mizhm = nixpkgs.lib.nixosSystem {
 		specialArgs = {inherit inputs;};
 		modules = [
-			./configuration.nix
+			./hosts/configuration.nix
+			inputs.home-manager.nixosModules.home-manager {
+				home-manager.useGlobalPkgs = true;
+				home-manager.useUserPackages = true;
+			}
 		];
 	};
   };
