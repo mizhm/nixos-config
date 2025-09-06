@@ -1,8 +1,8 @@
-{}: {
+{...}: {
   programs = {
     direnv = {
       enable = true;
-      enableFishInegration = true; # see note on other shells below
+      enableFishIntegration = true;
       nix-direnv.enable = true;
     };
   };
