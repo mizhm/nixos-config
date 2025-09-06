@@ -11,10 +11,11 @@
 
     #lsp
     lua-language-server
-    typescript-language-server
     tailwindcss-language-server
+    vtsls
     nil
     gopls
+    vscode-langservers-extracted
 
     #lininting
     eslint
