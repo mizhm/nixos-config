@@ -1,8 +1,4 @@
-{
-  pkgs,
-  ...
-}:
-{
+{pkgs, ...}: {
   xdg.configFile."nvim".source = ../confs/nvim;
 
   programs.neovim = {
@@ -18,6 +14,7 @@
     typescript-language-server
     tailwindcss-language-server
     nil
+    gopls
 
     #lininting
     eslint
