@@ -5,5 +5,6 @@
     youtube-music
     jetbrains.datagrip
     jetbrains.goland
+    devenv
   ];
 }
