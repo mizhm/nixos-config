@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{...}: {
   programs.git = {
     enable = true;
 
@@ -11,7 +6,7 @@
     userName = "mizhm";
 
     signing = {
-      key = "/home/minh/.ssh/id_ed25519";
+      key = "/home/minh/.ssh/id_ed25519.pub";
       signByDefault = true;
     };
 
