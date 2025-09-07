@@ -6,5 +6,6 @@
     jetbrains.datagrip
     jetbrains.goland
     devenv
+    qwen-code
   ];
 }
