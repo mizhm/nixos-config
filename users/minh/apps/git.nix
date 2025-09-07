@@ -6,7 +6,7 @@
     userName = "mizhm";
 
     signing = {
-      key = "/home/minh/.ssh/id_ed25519.pub";
+      key = "/home/minh/.ssh/id_ed25519";
       signByDefault = true;
     };
 
