@@ -11,6 +11,7 @@
 
     #lsp
     lua-language-server
+    yaml-language-server
     tailwindcss-language-server
     vtsls
     nil
