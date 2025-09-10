@@ -1,6 +1,3 @@
-{ pkgs
-, config
-, ...
-}: {
-  xdg.configFile."fish".source = ../confs/fish;
+{...}: {
+  xdg.configFile."fish".source = ../dotfiles/fish;
 }

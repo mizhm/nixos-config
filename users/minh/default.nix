@@ -11,9 +11,6 @@
     extraGroups = ["networkmanager" "wheel" "docker"];
   };
 
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
   environment = {
     shells = [pkgs.fish];
 
@@ -24,18 +21,8 @@
       anki
       ghostty
       fastfetch
-      git
       unzip
       fish
-    ];
-
-    gnome.excludePackages = with pkgs; [
-      gnome-maps
-      gnome-music
-      gnome-tour
-      gnome-text-editor
-      gnome-user-docs
-      gnome-contacts
     ];
   };
 

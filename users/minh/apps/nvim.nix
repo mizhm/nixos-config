@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  xdg.configFile."nvim".source = ../confs/nvim;
+  xdg.configFile."nvim".source = ../dotfiles/nvim;
 
   programs.neovim = {
     enable = true;

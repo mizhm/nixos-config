@@ -5,7 +5,6 @@
 local o = vim.opt
 
 -- linebreak
-o.clipboard = "unnamedplus"
 o.linebreak = true
 o.breakindent = true
 o.textwidth = 120
