@@ -12,6 +12,7 @@
       waybar
       swaylock
       swayidle
+      swww
       grim
       xdg-desktop-portal-gtk
     ];

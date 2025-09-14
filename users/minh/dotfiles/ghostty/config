@@ -5,4 +5,5 @@ shell-integration-features = no-cursor
 cursor-style-blink = false
 font-family = "Maple Mono NF"
 maximize = true
+window-decoration = none
 

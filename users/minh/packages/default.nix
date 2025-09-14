@@ -7,6 +7,8 @@
     jetbrains.goland
     devenv
     qwen-code
+    playerctl
+    pavucontrol
 
     # dev
     go
