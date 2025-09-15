@@ -19,7 +19,9 @@
 /* --- Left Modules (Individual, Fully Rounded Blocks - With Horizontal Spacing & Simple Hover) --- */
 #workspaces,
 #custom-uptime,
-#cpu {
+#cpu,
+#memory
+{
   background-color: #1a1b26;
   padding: 0.3rem 0.7rem;
   margin: 5px 0px; /* 5px top/bottom margin, 0px left/right (base for individual control) */
@@ -33,11 +35,12 @@
 
 #workspaces {
   padding: 2px;
-  margin-left: 7px; /* Margin from the far left edge */
+  margin-left: 8px; /* Margin from the far left edge */
   margin-right: 5px; /* Spacing after the workspaces module */
 }
 
-#custom-uptime {
+#custom-uptime,
+#cpu {
   margin-right: 5px; /* Spacing after the uptime module */
 }
 
@@ -149,7 +152,7 @@
   background-color: rgb(41, 42, 53);
 }
 
-#bluetooth {
+#network {
   margin-left: 0px; 
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -158,7 +161,7 @@
 #battery {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  margin-right: 7px;
+  margin-right: 8px;
 }
 
 #custom-uptime {

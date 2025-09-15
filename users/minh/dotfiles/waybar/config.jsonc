@@ -80,7 +80,7 @@
     "format-icon": [""],
     "tooltip": false,
     "interval": 1600,
-    "exec": "$HOME/.config/waybar/scripts/uptime.sh",
+    "exec": "$HOME/nixos-config/users/minh/dotfiles/waybar/scripts/uptime.sh",
   },
 
   "backlight": {
@@ -124,8 +124,8 @@
   "custom/pomodoro": {
     "format": "{}",
     "return-type": "json",
-    "exec": "waybar-module-pomodoro --no-work-icons",
-    "on-click": "waybar-module-pomodoro toggle",
-    "on-click-right": "waybar-module-pomodoro reset",
+    "exec": "$HOME/nixos-config/users/minh/dotfiles/waybar/scripts/waybar-module-pomodoro --no-work-icons",
+    "on-click": "$HOME/nixos-config/users/minh/dotfiles/waybar/scripts/waybar-module-pomodoro toggle",
+    "on-click-right": "$HOME/nixos-config/users/minh/dotfiles/waybar/scripts/waybar-module-pomodoro reset",
   },
 }

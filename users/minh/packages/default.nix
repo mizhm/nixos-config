@@ -28,5 +28,6 @@
     lazygit
     ripgrep
     imagemagick
+    cliphist
   ];
 }
