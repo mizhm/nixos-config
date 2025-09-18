@@ -6,6 +6,8 @@
   };
 
   home.packages = with pkgs; [
+    tree-sitter
+
     #lsp
     lua-language-server
     yaml-language-server
