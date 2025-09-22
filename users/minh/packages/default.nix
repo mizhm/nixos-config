@@ -9,6 +9,8 @@
     qwen-code
     playerctl
     pavucontrol
+    postman
+    discord
 
     # dev
     go

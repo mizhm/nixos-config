@@ -19,6 +19,7 @@
 
     #linting
     eslint
+    markdownlint-cli2
 
     #formatter
     alejandra
