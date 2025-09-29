@@ -25,5 +25,12 @@
     alejandra
     prettier
     biome
+
+    #go
+    gotools
+    gofumpt
+    gomodifytags
+    impl
+    delve
   ];
 }
