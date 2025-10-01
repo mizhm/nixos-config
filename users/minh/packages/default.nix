@@ -5,12 +5,14 @@
     youtube-music
     jetbrains.datagrip
     jetbrains.goland
+    jetbrains.pycharm-professional
     devenv
     qwen-code
     playerctl
     pavucontrol
     postman
     discord
+    qbittorrent
 
     # dev
     go
