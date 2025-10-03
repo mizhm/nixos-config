@@ -6,8 +6,10 @@
     jetbrains.datagrip
     jetbrains.goland
     jetbrains.pycharm-professional
+    jetbrains.rust-rover
     devenv
     qwen-code
+    gh
     playerctl
     pavucontrol
     postman
@@ -17,6 +19,7 @@
     # dev
     go
     rustc
+    rust-analyzer
     nodejs
     cargo
     gcc
