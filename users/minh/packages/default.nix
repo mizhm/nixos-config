@@ -7,6 +7,7 @@
     jetbrains.goland
     jetbrains.pycharm-professional
     jetbrains.rust-rover
+    google-chrome
     devenv
     qwen-code
     gh
