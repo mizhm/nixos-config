@@ -1,3 +1,3 @@
 {...}: {
-  xdg.configFile."fish".source = ../dotfiles/fish;
+  xdg.configFile."fish/config.fish".source = ../dotfiles/fish/config.fish;
 }
