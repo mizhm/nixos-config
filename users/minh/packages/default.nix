@@ -16,6 +16,7 @@
     postman
     discord
     qbittorrent
+    obs-studio
 
     # dev
     go
@@ -27,6 +28,7 @@
     python3
     jq
     yq
+    bun
 
     # util
     eza
@@ -37,5 +39,6 @@
     ripgrep
     imagemagick
     cliphist
+    go-task
   ];
 }
