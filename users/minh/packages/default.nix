@@ -8,9 +8,6 @@
     jetbrains.pycharm-professional
     jetbrains.rust-rover
     google-chrome
-    devenv
-    qwen-code
-    gh
     playerctl
     pavucontrol
     postman
@@ -29,6 +26,11 @@
     jq
     yq
     bun
+    devenv
+    qwen-code
+    gemini-cli
+    gh
+    go-task
 
     # util
     eza
@@ -39,6 +41,5 @@
     ripgrep
     imagemagick
     cliphist
-    go-task
   ];
 }
