@@ -13,3 +13,4 @@ o.shell = "/run/current-system/sw/bin/fish"
 o.spell = true
 
 vim.g.snacks_animate = false
+vim.g.lazyvim_prettier_needs_config = true

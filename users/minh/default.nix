@@ -26,6 +26,8 @@
     ];
   };
 
+  nix.settings.trusted-users = ["roots" "minh"];
+
   home-manager.users.minh = {
     home = rec {
       inherit (config.system) stateVersion;
