@@ -50,6 +50,8 @@
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
       SDL_VIDEODRIVER = "wayland";
       GTK_USE_PORTAL = 1;
+      GTK_IM_MODULE = "fcitx";
+      QT_IM_MODULES = "wayland;fcitx;ibus";
     };
   };
 }
