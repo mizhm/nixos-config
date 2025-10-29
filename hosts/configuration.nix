@@ -110,6 +110,12 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  #enable cloudflare warp
+  services.cloudflare-warp = {
+    enable = true;
+    openFirewall = true;
+  };
+
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [5173 8070];
   # networking.firewall.allowedUDPPorts = [ ... ];
