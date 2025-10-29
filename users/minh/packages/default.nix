@@ -10,10 +10,7 @@
     google-chrome
     playerctl
     pavucontrol
-    postman
     discord
-    qbittorrent
-    obs-studio
 
     # dev
     go
@@ -28,9 +25,9 @@
     bun
     devenv
     qwen-code
-    gemini-cli
-    gh
     go-task
+    postman
+    yaak
 
     # util
     eza
@@ -41,5 +38,12 @@
     ripgrep
     imagemagick
     cliphist
+    sunsetr
+
+    #tool
+    httpx
+    nuclei
+    subfinder
+    naabu
   ];
 }

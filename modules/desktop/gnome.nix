@@ -13,10 +13,10 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    gnome-tweaks
-
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.compact-top-bar
-    gnomeExtensions.kimpanel
+    # gnome-tweaks
+    #
+    # gnomeExtensions.blur-my-shell
+    # gnomeExtensions.compact-top-bar
+    # gnomeExtensions.kimpanel
   ];
 }

@@ -2,15 +2,12 @@
   programs.git = {
     enable = true;
 
-    userEmail = "minhnt141204@gmail.com";
-    userName = "mizhm";
+    settings = {
+      user = {
+        email = "minhnt141204@gmail.com";
+        name = "mizhm";
+      };
 
-    signing = {
-      key = "/home/minh/.ssh/id_ed25519";
-      signByDefault = true;
-    };
-
-    extraConfig = {
       gpg = {format = "ssh";};
 
       url = {
@@ -22,6 +19,11 @@
       commit = {gpgsign = true;};
 
       tag = {gpgsign = true;};
+    };
+
+    signing = {
+      key = "/home/minh/.ssh/id_ed25519";
+      signByDefault = true;
     };
   };
 }

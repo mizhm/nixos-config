@@ -20,6 +20,8 @@
     #linting
     eslint
     markdownlint-cli2
+    golangci-lint
+    statix
 
     #formatter
     alejandra

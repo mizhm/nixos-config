@@ -10,5 +10,14 @@ export TMPDIR="/tmp"
 alias c clear
 alias nv nvim
 
-# set -gx GOPATH $HOME/go
-# set -gx PATH $PATH $GOPATH/bin
+#nix
+alias cleanup "sudo nix-collect-garbage --delete-older-than 7d"
+alias listgen "sudo nix-env -p /nix/var/nix/profiles/system --list-generations"
+alias nixremove "nix-store --gc"
+alias test-build "sudo nixos-rebuild test --flake ~/nixos-config/.#mizhm"
+alias switch-build "sudo nixos-rebuild switch --flake ~/nixos-config/.#mizhm"
+alias optimise "nix store optimise"
+
+#system
+alias shutdown "systemctl poweroff"
+alias reboot "systemctl reboot"
