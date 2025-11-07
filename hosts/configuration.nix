@@ -49,8 +49,8 @@
       enable = true;
       type = "fcitx5";
       fcitx5.addons = with pkgs; [
-        fcitx5-unikey
-        fcitx5-configtool
+        qt6Packages.fcitx5-unikey
+        qt6Packages.fcitx5-configtool
       ];
     };
   };
@@ -87,8 +87,9 @@
   # services.xserver.libinput.enable = true;
 
   # Docker
-  virtualisation.docker = {
-    enable = true;
+  virtualisation = {
+    docker.enable = true;
+    waydroid.enable = true;
   };
 
   # Allow unfree packages
@@ -116,8 +117,23 @@
     openFirewall = true;
   };
 
+  # Config systemd resolved with nextdns
+  services.resolved = {
+    enable = true;
+    dnsovertls = "true";
+    extraConfig = ''
+      [Resolve]
+      DNS=45.90.28.0#e33261.dns.nextdns.io
+      DNS=2a07:a8c0::#e33261.dns.nextdns.io
+      DNS=45.90.30.0#e33261.dns.nextdns.io
+      DNS=2a07:a8c1::#e33261.dns.nextdns.io
+      DNSOverTLS=yes
+    '';
+    dnssec = "true";
+  };
+
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [5173 8070];
+  networking.firewall.allowedTCPPorts = [8070];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
@@ -128,7 +144,7 @@
       twemoji-color-font
       noto-fonts
       noto-fonts-cjk-sans
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       maple-mono.NF
     ];
 

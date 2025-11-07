@@ -22,6 +22,7 @@
     markdownlint-cli2
     golangci-lint
     statix
+    hadolint
 
     #formatter
     alejandra

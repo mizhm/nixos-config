@@ -13,6 +13,7 @@
     discord
 
     # dev
+    lua
     go
     rustc
     rust-analyzer
@@ -28,6 +29,7 @@
     go-task
     postman
     yaak
+    luajitPackages.luarocks-nix
 
     # util
     eza
@@ -39,11 +41,17 @@
     imagemagick
     cliphist
     sunsetr
+    gnumake
 
     #tool
     httpx
+    dnsx
     nuclei
     subfinder
     naabu
+    gospider
+    sqlmap
+    nmap
+    python312Packages.dirsearch
   ];
 }
