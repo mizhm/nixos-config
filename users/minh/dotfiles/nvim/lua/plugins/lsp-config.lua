@@ -10,6 +10,7 @@ return {
         yamlls = {},
         ocamllsp = {},
         vtsls = {},
+        biome = {},
       },
     },
   },

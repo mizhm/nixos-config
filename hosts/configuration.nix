@@ -49,6 +49,7 @@
       enable = true;
       type = "fcitx5";
       fcitx5.addons = with pkgs; [
+        fcitx5-mozc
         qt6Packages.fcitx5-unikey
         qt6Packages.fcitx5-configtool
       ];
@@ -89,7 +90,7 @@
   # Docker
   virtualisation = {
     docker.enable = true;
-    waydroid.enable = true;
+    # waydroid.enable = true;
   };
 
   # Allow unfree packages

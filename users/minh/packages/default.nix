@@ -7,6 +7,7 @@
     jetbrains.goland
     jetbrains.pycharm-professional
     jetbrains.rust-rover
+    zed-editor
     google-chrome
     playerctl
     pavucontrol
