@@ -31,6 +31,7 @@
     postman
     yaak
     luajitPackages.luarocks-nix
+    antigravity-fhs
 
     # util
     eza
