@@ -162,6 +162,21 @@
     };
   };
 
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = ["*"]; # Applies to all connected keyboards
+        settings = {
+          main = {
+            # Map the Right Alt key to type "z"
+            rightalt = "z";
+          };
+        };
+      };
+    };
+  };
+
   nix.gc = {
     automatic = true;
     dates = "weekly";

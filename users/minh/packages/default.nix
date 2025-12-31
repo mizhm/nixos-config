@@ -5,7 +5,7 @@
     youtube-music
     jetbrains.datagrip
     jetbrains.goland
-    jetbrains.pycharm-professional
+    jetbrains.pycharm
     jetbrains.rust-rover
     zed-editor
     google-chrome
@@ -15,6 +15,7 @@
 
     # dev
     lua
+    buf
     go
     rustc
     rust-analyzer
@@ -32,6 +33,7 @@
     yaak
     luajitPackages.luarocks-nix
     antigravity-fhs
+    lazydocker
 
     # util
     eza
