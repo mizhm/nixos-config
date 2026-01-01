@@ -2,10 +2,9 @@
   home.packages = with pkgs; [
     which
     wl-clipboard
-    youtube-music
+    pear-desktop
     jetbrains.datagrip
     jetbrains.goland
-    jetbrains.pycharm
     jetbrains.rust-rover
     zed-editor
     google-chrome
@@ -27,7 +26,6 @@
     yq
     bun
     devenv
-    qwen-code
     go-task
     postman
     yaak
@@ -53,9 +51,9 @@
     nuclei
     subfinder
     naabu
-    gospider
-    sqlmap
-    nmap
-    python312Packages.dirsearch
+    # gospider
+    # sqlmap
+    # nmap
+    # python312Packages.dirsearch
   ];
 }
