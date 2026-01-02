@@ -11,6 +11,8 @@
     playerctl
     pavucontrol
     discord
+    polkit_gnome
+    mpv
 
     # dev
     lua

@@ -298,12 +298,12 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "sunsetr"
-spawn-at-startup "waybar"
-spawn-at-startup "swww-daemon"
-spawn-at-startup "swaync"
-spawn-sh-at-startup "swww img /home/minh/Pictures/wallhaven-8gop1j.jpg"
-spawn-sh-at-startup "swaybg -m fill -i $HOME/Pictures/wallhaven-8gop1j.jpg"
+// spawn-at-startup "sunsetr"
+// spawn-at-startup "waybar"
+// spawn-at-startup "swww-daemon"
+// spawn-at-startup "swaync"
+// spawn-sh-at-startup "swww img /home/minh/Pictures/wallhaven-8gop1j.jpg"
+// spawn-sh-at-startup "swaybg -m fill -i $HOME/Pictures/wallhaven-8gop1j.jpg"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
 
 
@@ -385,8 +385,8 @@ window-rule {
 }
 
 cursor {
-    xcursor-theme "Adwaita"
-    xcursor-size 24 
+    xcursor-theme "Bibata-Original-Ice"
+    xcursor-size 24
 
     hide-when-typing
     hide-after-inactive-ms 1000
@@ -410,8 +410,8 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+B hotkey-overlay-title="Open firefox" { spawn "firefox"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    // Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -638,7 +638,7 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
+    // Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
@@ -653,12 +653,27 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
-    Mod+Shift+E { quit; }
+    // Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+    
+    // DMS Spotlight (App Launcher)
+    Mod+D { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    
+    // DMS Notification Center
+    Mod+N { spawn "dms" "ipc" "call" "notifications" "toggle"; }
+    
+    // DMS Lock Screen
+    Super+Alt+L { spawn "dms" "ipc" "call" "lock" "lock"; }
+
+    // DMS Screenshot (Integrates with DMS UI)
+    Print { spawn "dms" "ipc" "call" "niri" "screenshot"; }
+    
+    // DMS Power Menu
+    Mod+Shift+E { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
 }
 
 // Disable the hot corners.
@@ -669,7 +684,7 @@ gestures {
 }
 
 // Put swaybg inside the overview backdrop.
-layer-rule {
-    match namespace="^wallpaper$"
-    place-within-backdrop true
-}
+// layer-rule {
+//     match namespace="^wallpaper$"
+//     place-within-backdrop true
+// }

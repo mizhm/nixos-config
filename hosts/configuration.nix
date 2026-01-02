@@ -6,7 +6,7 @@
     ./hardware-configuration.nix
     ../users/minh
 
-    ../modules/desktop/gnome.nix
+    # ../modules/desktop/gnome.nix
     ../modules/desktop/niri
   ];
 
