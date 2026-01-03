@@ -60,7 +60,6 @@
 
   environment = {
     systemPackages = with pkgs; [
-      nemo-with-extensions
       grim
       xwayland-satellite
       quickshell
@@ -69,6 +68,7 @@
       bibata-cursors
       glib
       gsettings-desktop-schemas
+      pcmanfm
     ];
 
     sessionVariables = {
