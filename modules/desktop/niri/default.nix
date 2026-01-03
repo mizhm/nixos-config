@@ -1,12 +1,4 @@
 {pkgs, ...}: {
-  programs.dms-shell = {
-    enable = true;
-    systemd.enable = true;
-    enableDynamicTheming = true;
-  };
-
-  programs.dconf.enable = true;
-
   services = {
     displayManager.dms-greeter = {
       enable = true;
@@ -33,7 +25,17 @@
     gnome.gnome-keyring.enable = true;
   };
 
-  programs.niri.enable = true;
+  programs = {
+    dms-shell = {
+      enable = true;
+      systemd.enable = true;
+      enableDynamicTheming = true;
+    };
+
+    dconf.enable = true;
+
+    niri.enable = true;
+  };
 
   xdg.portal = {
     enable = true;
@@ -58,18 +60,12 @@
 
   environment = {
     systemPackages = with pkgs; [
-      # fuzzel
-      # waybar
-      # swaylock
-      # swayidle
-      # swww
-      # swaynotificationcenter
-      # swaybg
       nemo-with-extensions
       grim
       xwayland-satellite
       quickshell
       whitesur-icon-theme
+      whitesur-gtk-theme
       bibata-cursors
       glib
       gsettings-desktop-schemas

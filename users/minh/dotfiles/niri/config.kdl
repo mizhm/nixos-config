@@ -140,6 +140,7 @@ output "HDMI-A-1" {
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
+    background-color "Transparent" // Transparent background behind windows.
     // Set gaps around windows in logical pixels.
     gaps 8
 
@@ -683,8 +684,7 @@ gestures {
     }
 }
 
-// Put swaybg inside the overview backdrop.
-// layer-rule {
-//     match namespace="^wallpaper$"
-//     place-within-backdrop true
-// }
+layer-rule {
+    match namespace="^quickshell$"
+    place-within-backdrop true
+}
