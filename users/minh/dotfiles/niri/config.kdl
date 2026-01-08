@@ -305,7 +305,8 @@ layout {
 // spawn-at-startup "swaync"
 // spawn-sh-at-startup "swww img /home/minh/Pictures/wallhaven-8gop1j.jpg"
 // spawn-sh-at-startup "swaybg -m fill -i $HOME/Pictures/wallhaven-8gop1j.jpg"
-spawn-sh-at-startup "wl-paste --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
 
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
