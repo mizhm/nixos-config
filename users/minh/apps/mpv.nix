@@ -1,3 +1,4 @@
-{
-  xdg.configFile."mpv".source = ../dotfiles/mpv;
+{config, ...}: {
+  xdg.configFile."mpv".source =
+    config.lib.file.mkOutOfStoreSymlink "/home/minh/nixos-config/users/minh/dotfiles/mpv";
 }

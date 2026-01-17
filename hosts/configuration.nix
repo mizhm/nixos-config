@@ -118,21 +118,21 @@
     openFirewall = true;
   };
 
-  # Config systemd resolved with nextdns
   services.resolved = {
     enable = true;
-    dnsovertls = "true";
-    extraConfig = ''
-      [Resolve]
-      DNS=45.90.28.0#e33261.dns.nextdns.io
-      DNS=2a07:a8c0::#e33261.dns.nextdns.io
-      DNS=45.90.30.0#e33261.dns.nextdns.io
-      DNS=2a07:a8c1::#e33261.dns.nextdns.io
-      DNSOverTLS=yes
-    '';
-    dnssec = "true";
+    settings = {
+      Resolve = {
+        DNS = [
+          "45.90.28.0#e33261.dns.nextdns.io"
+          "2a07:a8c0::#e33261.dns.nextdns.io"
+          "45.90.30.0#e33261.dns.nextdns.io"
+          "2a07:a8c1::#e33261.dns.nextdns.io"
+        ];
+        DNSOverTLS = true;
+        DNSSEC = true;
+      };
+    };
   };
-
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [8070];
   # networking.firewall.allowedUDPPorts = [ ... ];

@@ -1,3 +1,4 @@
-{...}: {
-  xdg.configFile."fish/config.fish".source = ../dotfiles/fish/config.fish;
+{config, ...}: {
+  xdg.configFile."fish".source =
+    config.lib.file.mkOutOfStoreSymlink "/home/minh/nixos-config/users/minh/dotfiles/fish";
 }

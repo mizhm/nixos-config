@@ -13,6 +13,8 @@
     discord
     polkit_gnome
     mpv
+    winboat
+    freerdp
 
     # dev
     lua
@@ -30,7 +32,6 @@
     devenv
     go-task
     postman
-    yaak
     luajitPackages.luarocks-nix
     antigravity-fhs
     lazydocker
@@ -44,7 +45,6 @@
     ripgrep
     imagemagick
     cliphist
-    sunsetr
     gnumake
 
     #tool

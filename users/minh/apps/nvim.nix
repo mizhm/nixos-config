@@ -1,5 +1,10 @@
-{pkgs, ...}: {
-  xdg.configFile."nvim".source = ../dotfiles/nvim;
+{
+  pkgs,
+  config,
+  ...
+}: {
+  xdg.configFile."nvim".source =
+    config.lib.file.mkOutOfStoreSymlink "/home/minh/nixos-config/users/minh/dotfiles/nvim";
 
   programs.neovim = {
     enable = true;
