@@ -7,7 +7,6 @@
     jetbrains.goland
     jetbrains.rust-rover
     zed-editor
-    google-chrome
     playerctl
     pavucontrol
     discord
@@ -15,6 +14,8 @@
     mpv
     winboat
     freerdp
+    libnotify
+    microsoft-edge
 
     # dev
     lua
@@ -35,6 +36,8 @@
     luajitPackages.luarocks-nix
     antigravity-fhs
     lazydocker
+    awscli2
+    terraform
 
     # util
     eza
