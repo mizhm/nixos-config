@@ -68,7 +68,7 @@
       bibata-cursors
       glib
       gsettings-desktop-schemas
-      pcmanfm
+      nautilus
     ];
 
     sessionVariables = {

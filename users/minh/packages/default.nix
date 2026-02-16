@@ -5,7 +5,7 @@
     pear-desktop
     jetbrains.datagrip
     jetbrains.goland
-    jetbrains.rust-rover
+    # jetbrains.rust-rover
     zed-editor
     playerctl
     pavucontrol
