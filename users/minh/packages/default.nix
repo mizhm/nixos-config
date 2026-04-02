@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     which
+    obsidian
     wl-clipboard
     pear-desktop
     jetbrains.datagrip
@@ -16,6 +17,7 @@
     freerdp
     libnotify
     microsoft-edge
+    claude-code
 
     # dev
     lua
@@ -38,6 +40,7 @@
     lazydocker
     awscli2
     terraform
+    android-tools
 
     # util
     eza
