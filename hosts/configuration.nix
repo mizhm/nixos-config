@@ -26,7 +26,7 @@
   # Enable bluetooth
   hardware.bluetooth = {
     enable = true;
-    powerOnBoot = true;
+    powerOnBoot = false;
     settings = {
       General = {
         Experimental = true;
@@ -93,7 +93,21 @@
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
-    wireplumber.enable = true;
+    wireplumber = {
+      enable = true;
+      extraConfig = {
+        "10-bluetooth-hw-volume" = {
+          "monitor.bluez.properties" = {
+            "bluez5.enable-hw-volume" = true;
+          };
+        };
+        "11-bluetooth-policy" = {
+          "wireplumber.settings" = {
+            "bluetooth.autoswitch-to-headset-profile" = false;
+          };
+        };
+      };
+    };
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
@@ -117,8 +131,37 @@
   #nix-ld
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-    # Add any missing dynamic libraries for unpackaged programs
-    # here, NOT in environment.systemPackages
+    glib
+    nss
+    nspr
+    atk
+    at-spi2-atk
+    dbus
+    libdrm
+    cups
+    expat
+    libxkbcommon
+    pango
+    cairo
+    alsa-lib
+    libgbm
+
+    libx11
+    libxcomposite
+    libxdamage
+    libxext
+    libxfixes
+    libxrandr
+    libxrender
+    libxscrnsaver
+    libxtst
+    libxcb
+
+    nspr
+    nss
+    libGL
+    udev
+    libpcap
   ];
 
   programs.appimage = {

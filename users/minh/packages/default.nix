@@ -1,6 +1,12 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   home.packages = with pkgs; [
     which
+    obs-studio
+    google-chrome
     obsidian
     wl-clipboard
     pear-desktop
@@ -17,12 +23,18 @@
     freerdp
     libnotify
     microsoft-edge
-    claude-code
+    libpcap
+    libpcap.lib
 
     # dev
     lua
     buf
     go
+    inputs.zig.packages.${pkgs.system}.default
+    (inputs.zls.packages.${system}.default.overrideAttrs (old: {
+      doCheck = false;
+      doInstallCheck = false;
+    }))
     rustc
     rust-analyzer
     nodejs
@@ -61,7 +73,7 @@
     naabu
     # gospider
     # sqlmap
-    # nmap
+    nmap
     # python312Packages.dirsearch
   ];
 }

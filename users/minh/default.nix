@@ -24,6 +24,10 @@
       unzip
       fish
     ];
+
+    sessionVariables = {
+      LD_LIBRARY_PATH = ["/home/minh/.local/lib"];
+    };
   };
 
   nix.settings.trusted-users = ["roots" "minh"];
