@@ -37,6 +37,7 @@
       inherit (config.system) stateVersion;
       username = "minh";
       homeDirectory = "/home/${username}";
+      sessionPath = ["$HOME/go/bin"];
     };
 
     _module.args = {inherit inputs;};

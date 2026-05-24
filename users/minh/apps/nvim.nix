@@ -4,13 +4,10 @@
   ...
 }: {
   xdg.configFile."nvim".source =
-    config.lib.file.mkOutOfStoreSymlink "/home/minh/nixos-config/users/minh/dotfiles/nvim";
-
-  programs.neovim = {
-    enable = true;
-  };
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/users/minh/dotfiles/nvim";
 
   home.packages = with pkgs; [
+    neovim
     tree-sitter
 
     #lsp
@@ -32,10 +29,8 @@
     #formatter
     alejandra
     prettier
-    biome
 
     #go
-    gotools
     gofumpt
     gomodifytags
     impl

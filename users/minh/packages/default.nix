@@ -1,18 +1,12 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     which
     obs-studio
-    google-chrome
     obsidian
     wl-clipboard
     pear-desktop
     jetbrains.datagrip
     jetbrains.goland
-    # jetbrains.rust-rover
     zed-editor
     playerctl
     pavucontrol
@@ -23,22 +17,13 @@
     freerdp
     libnotify
     microsoft-edge
-    libpcap
     libpcap.lib
 
     # dev
     lua
     buf
     go
-    inputs.zig.packages.${pkgs.system}.default
-    (inputs.zls.packages.${system}.default.overrideAttrs (old: {
-      doCheck = false;
-      doInstallCheck = false;
-    }))
-    rustc
-    rust-analyzer
     nodejs
-    cargo
     gcc
     python3
     jq
@@ -48,11 +33,10 @@
     go-task
     postman
     luajitPackages.luarocks-nix
-    antigravity-fhs
     lazydocker
     awscli2
     terraform
-    android-tools
+    # android-tools
 
     # util
     eza
@@ -73,7 +57,7 @@
     naabu
     # gospider
     # sqlmap
-    nmap
+    # nmap
     # python312Packages.dirsearch
   ];
 }

@@ -1,7 +1,12 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   gtk = {
     enable = true;
     colorScheme = "dark";
+    gtk4.theme = config.gtk.theme;
 
     iconTheme = {
       name = "WhiteSur";
