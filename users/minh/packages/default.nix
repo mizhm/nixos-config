@@ -18,6 +18,7 @@
     libnotify
     microsoft-edge
     libpcap.lib
+    ayugram-desktop
 
     # dev
     lua
@@ -50,11 +51,11 @@
     gnumake
 
     #tool
-    httpx
-    dnsx
-    nuclei
-    subfinder
-    naabu
+    # httpx
+    # dnsx
+    # nuclei
+    # subfinder
+    # naabu
     # gospider
     # sqlmap
     # nmap
